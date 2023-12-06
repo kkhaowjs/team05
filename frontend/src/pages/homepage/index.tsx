@@ -4,7 +4,7 @@ import Navbar from '../../component/navbar'
 import Footerbar from '../../component/footerbar'
 import { Content } from 'antd/es/layout/layout'
 import { Image } from 'antd'
-import logo from '../../assets/amoungtou.png'
+import logo from '../../assets/window10bg.jpg'
 const Homepage = () => {
   return (<>
     <Headbarlogo/>
