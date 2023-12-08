@@ -20,7 +20,7 @@ const Footerbar = () => {
   };
 
   const sectionStyle: React.CSSProperties = {
-    margin: '0 20px',
+    margin: '0 0px',
   };
   const firstSectionStyle: React.CSSProperties = {
     flex: '0 0 300px',
@@ -38,7 +38,7 @@ const Footerbar = () => {
         <div style={containerStyle}>
           <div style={firstSectionStyle}>
             <h3>About Us</h3>
-            <p>Learn more about our department store and our mission.</p>
+            <p>SUT Computer Engineering Software Engineering Project team05</p>
           </div>
           <div style={sectionStyle}>
             <h3>Payment</h3>

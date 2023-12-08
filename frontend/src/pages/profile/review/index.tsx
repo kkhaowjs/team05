@@ -1,5 +1,5 @@
 import React from 'react'
-import Headbarlogo from '../../component/headbarlogo'
+import Headbarlogo from '../../../component/headbarlogo'
 const Review = () => {
   return (<>
     <Headbarlogo/>
