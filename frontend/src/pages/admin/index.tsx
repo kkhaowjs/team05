@@ -1,7 +1,7 @@
 import React, { CSSProperties, useState } from 'react';
 import { Layout,Button,Menu } from 'antd';
 
-import {MenuFoldOutlined,MenuUnfoldOutlined,SkinOutlined,HomeOutlined,TeamOutlined,FileTextOutlined,} from '@ant-design/icons';
+import {MenuFoldOutlined,MenuUnfoldOutlined,SkinOutlined,HomeOutlined,TeamOutlined,FileTextOutlined,ShoppingOutlined,} from '@ant-design/icons';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -30,8 +30,6 @@ const Admin = () => {
     
     const siderStyle: CSSProperties = {
         justifyContent: 'center',
-        lineHeight: '100px',
-        color: '#fff',
         backgroundColor: '#D9E2D9',
         display: 'flex',
     };
@@ -52,7 +50,9 @@ const Admin = () => {
 
     return (
         <Layout style={layoutStyle}>
-            <Sider trigger={null} collapsible collapsed={collapsed} style={siderStyle}>
+            <Sider trigger={null} collapsible collapsed={collapsed} style={siderStyle} collapsedWidth={115}>
+            <ShoppingOutlined style={{position: 'absolute',color: '#343434',marginTop: '20px',fontSize: '30px',left: collapsed ? '36%' : '10px',}}/>
+            <span style={{position: 'absolute',display: collapsed ? 'none' : 'block',color: '#343434',marginTop: '23px',left: '40px',fontSize: '22px',fontWeight: 'bold',}}>Torhinozorus</span>
             <div className="logo" />
             <Menu
                 theme="light"
@@ -80,7 +80,7 @@ const Admin = () => {
                     label: 'Order',
                 },
                 ]}
-                style={{backgroundColor: '#D9E2D9',border: 'none',width: collapsed ? '80px' : '200px',}}
+                style={{backgroundColor: '#D9E2D9',border: 'none',color: '#343434',fontSize: '18px',marginTop: '70px',}}
             />
             </Sider>
             <Layout>
