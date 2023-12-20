@@ -1,7 +1,7 @@
 import React, { CSSProperties, useState } from 'react';
 import { Layout,Button,Menu } from 'antd';
 
-import {MenuFoldOutlined,MenuUnfoldOutlined,SkinOutlined,HomeOutlined,TeamOutlined,} from '@ant-design/icons';
+import {MenuFoldOutlined,MenuUnfoldOutlined,SkinOutlined,HomeOutlined,TeamOutlined,FileTextOutlined,} from '@ant-design/icons';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -73,6 +73,11 @@ const Admin = () => {
                     key: '3',
                     icon: <SkinOutlined/>,
                     label: 'Product',
+                },
+                {
+                    key: '4',
+                    icon: <FileTextOutlined/>,
+                    label: 'Order',
                 },
                 ]}
                 style={{backgroundColor: '#D9E2D9',border: 'none',width: collapsed ? '80px' : '200px',}}
