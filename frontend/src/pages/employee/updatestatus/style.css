@@ -1,0 +1,17 @@
+.label {
+    height: 24px;
+    width: 172px;
+}
+
+.label .order-ID-status {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 80%; /* Use numeric value without quotes */
+    line-height: normal;
+    position: fixed;
+    top: 8%; /* Use numeric value without quotes */
+    white-space: nowrap;
+    text-align: right;
+}
