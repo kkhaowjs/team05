@@ -50,11 +50,11 @@ type Wishlist struct {
 type Customer struct {
 	gorm.Model
 
-	Email			string
-	Firstname		string
-	Lastname		string
-	Dateofbirth		time.Time
-	Username		string
+	Email			string		`valid:"required~Email is required, email~Email is invalid",gorm:"uniqueIndex"`
+	Firstname		string		`valid:"required~FirstName is required"`
+	Lastname		string		`valid:"required~LastName is required"`
+	Dateofbirth		time.Time	
+	Username		string		`valid:"required~Username is required"`
 
 	Addresses 		[]Address 	`gorm:"foreignKey:CustomerID"`
 	Wishlists		[]Wishlist 	`gorm:"foreignKey:CustomerID"`
@@ -90,12 +90,12 @@ type Status struct {
 type Address struct {
 	gorm.Model
 
-	Fullname		string
-	Phonenumber		string
-	Address			string
-	Province		string
-	District		string
-	Postcode		string
+	Fullname		string		`valid:"required~Fullname is required"`
+	Phonenumber		string		`valid:"required~PhoneNumber is required"`
+	Address			string		`valid:"required~Address is required"`
+	Province		string		`valid:"required~Province is required"`
+	District		string		`valid:"required~District is required"`
+	Postcode		string		`valid:"required~Postcode is required"`
 	Default			int
 
 	CustomerID 		*uint
@@ -107,12 +107,12 @@ type Address struct {
 type Employee struct {
 	gorm.Model
 
-	Name			string
-	Username		string
-	Email			string
-	Password		string
-	Phone           string
-	Department		string
+	Name			string		`valid:"required~Name is required"`
+	Username		string		`valid:"required~Username is required"`
+	Email			string		`valid:"required~Email is required, email~Email is invalid",gorm:"uniqueIndex"`
+	Password		string		`valid:"required~Password is required"`
+	Phone           string		`valid:"required~Phone is required"`
+	Department		string		`valid:"required~Department is required"`
 
 	Orders  		[]Order   	`gorm:"foreignKey:EmployeeID"`
     Products 		[]Product 	`gorm:"foreignKey:EmployeeID"`
@@ -121,14 +121,14 @@ type Employee struct {
 type Product struct {
 	gorm.Model
 
-	Name			string
-	Photo			string
-	Cost			int
-	Color    		string
-	Brand			string
-	Quantity		int
+	Name			string		`valid:"required~Name is required"`
+	Photo			string		
+	Cost			int			`valid:"required~Cost is required"`
+	Color    		string		`valid:"required~Color is required"`
+	Brand			string		
+	Quantity		int			`valid:"required~Quantity is required"`
 	Sentfrom		string
-	Details			string
+	Details			string		`gorm:"type:longtext"`
 
 	ProductTypeID   *uint
 	ProductType     ProductType `gorm:"references:id"`
@@ -153,7 +153,7 @@ type Rating struct {
 
 	Dateandtime		time.Time
 	Rate			int
-	Description		string
+	Description		string		`gorm:"type:longtext"`
 	
 	ProductID 		*uint
     Product   		Product 	`gorm:"references:id"`
