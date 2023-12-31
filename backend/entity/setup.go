@@ -28,8 +28,6 @@ func ConnectDB() (*gorm.DB, error) {
 		&ProductType{},
 		&Product{},
 		&Cart{},
-		&Cartitem{},
-		&Wishlistforproduct{},
 		&Payment{},
 		&Order{},
 		&Rating{},

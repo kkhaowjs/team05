@@ -1,4 +1,4 @@
-module github.com/PyeThun/TEAM05
+module github.com/PyeThun/team05
 
 go 1.19
 
