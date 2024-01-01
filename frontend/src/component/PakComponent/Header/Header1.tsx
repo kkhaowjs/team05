@@ -1,8 +1,16 @@
 import { Col } from 'antd';
+import { Layout } from "antd";
+import './Style.css'
+const { Header } = Layout;
+
+
 const Header1 = () => {
     return(
         <>
-            <Col className="Head1" span={8} style={{ flex: '1', display: 'flex', textAlign: 'center' }}>
+        <Layout>
+            <Header style={{ display: 'flex', alignItems: 'center', background: '#003D06', height: '40px' }}>
+            
+            <Col className="Head1" span={8} style={{ display: 'flex', textAlign: 'center' }}>
                 <svg className = 'tel-icon'    
                     style={{marginLeft:'50px',
                             minWidth:'24px'}}
@@ -11,9 +19,13 @@ const Header1 = () => {
                 </svg>
                 <span style={{ marginTop: '5px' }}>+66012345678</span>
             </Col>
-            <Col className="Head2" span={8} style={{ flex: '2', textAlign: 'center' }}>
-                <span >Get 50% Off on Selected Items | Shop Now </span>
+
+            <Col className="Head2" span={12} >
+                <span style={{ marginLeft: '25px' }}>Get 50% Off on Selected Items | Shop Now </span>
             </Col>
+            
+            </Header>
+        </Layout>
         </>
     )
 };

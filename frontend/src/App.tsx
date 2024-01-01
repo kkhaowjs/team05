@@ -8,6 +8,7 @@ import EditProfilePage from './pages/EditProfilePage/EditProfilePage';
 import CartPage from './pages/CartPage/CartPage';
 import WishlistPage from './pages/WishlistPage/WishlistPage';
 import PurchasePage from './pages/PurchasePage/PurchasePage';
+import LoginPage from './pages/LoginPage/LoginPage';
 import './App.css';
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
         <Route path='/' Component={HomePage}/>
         <Route path='/review' Component={ReviewPage}/>
         <Route path='/admin' Component={Admin}/>
-        <Route path="/EditProfilePage"      element={<EditProfilePage />} />
-        <Route path="/CartPage"      element={<CartPage />} />
-        <Route path="/WishlistPage"      element={<WishlistPage />} />
-        <Route path="/PurchasePage"      element={<PurchasePage />} />
+        <Route path="/EditProfile"      element={<EditProfilePage />} />
+        <Route path="/Cart"      element={<CartPage />} />
+        <Route path="/Wishlist"      element={<WishlistPage />} />
+        <Route path="/Purchase"      element={<PurchasePage />} />
+        <Route path="/Login"      element={<LoginPage />} />
       </Routes>
     </Router>
     </>
