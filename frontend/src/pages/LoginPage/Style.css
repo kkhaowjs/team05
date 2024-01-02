@@ -1,0 +1,75 @@
+.field {
+    position: relative;
+    left:25px;
+}
+
+.field input {
+    color: #565656;
+    background: none;
+    padding: 0.625rem;
+    border: 1px solid #003D06;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+    width:220px;
+}
+
+.field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0.625rem, 0.425rem);
+    color: #030104;
+    background-color: white;
+    padding-inline-start: 0.25rem;
+    border: 1px solid transparent;
+    transition: transform 250ms, background-color 250ms, border-color 250ms;
+}
+
+.field:focus-within label,
+.field:not(:has(:placeholder-shown)) label {
+    transform: translate(0.625rem, -1rem);
+}
+
+.field ::placeholder {
+    color: transparent;
+}
+
+.field:focus-within input {
+    border-width: 1px solid #003D06; 
+}
+.Login-button{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    width: 60px;
+    background-color:#F4794E !important;
+    border: 2px solid#f6875f;
+    border-radius: 10px !important;
+    padding: 5px 8px;
+            /* แกนวาย-แกนเอ็กซ์ */
+    top: 15px;
+    left: 105px;
+}
+.Login-button:hover{
+    background-color:#f88c64 !important;
+}
+.Register-button{
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    color:#191919;
+    font-weight: 500;
+    width: 65px;
+    background-color: #fdd998 !important;
+    border: 1.5px solid#000000;
+    border-radius: 10px !important;
+    padding: 5px 8px;
+            /* แกนวาย-แกนเอ็กซ์ */
+    top: -12px;
+    left: 75px;
+}
+.Register-button:hover{
+    background-color:#FFE5B5 !important;
+}
