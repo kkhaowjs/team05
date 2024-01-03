@@ -3,10 +3,25 @@ import Header1 from "../../component/PakComponent/Header/Header1";
 import Footer from "../../component/PakComponent/Footer/Footer";
 import React, { useState} from 'react';
 import './Style.css'
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 const {  Content } = Layout;
 
+
 export default function Login(){
+    const navigate = useNavigate();
+    const onFinish = (values: any) => {
+        console.log('Success:', values);
+        navigate('/');
+      };
+      
+      const onFinishFailed = (errorInfo: any) => {
+        console.log('Failed:', errorInfo);
+      };
+      
+      type FieldType = {
+        username?: string;
+        password?: string;
+      };
     return(
         <>
         <Layout>
@@ -46,27 +61,42 @@ export default function Login(){
                         width="36" height="30" viewBox="0 0 37 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.5 21.5C24.3391 21.5 29.0714 16.6877 29.0714 10.75C29.0714 4.8123 24.3391 0 18.5 0C12.6609 0 7.92857 4.8123 7.92857 10.75C7.92857 16.6877 12.6609 21.5 18.5 21.5ZM25.9 24.1875H24.5208C22.6873 25.0441 20.6473 25.5312 18.5 25.5312C16.3527 25.5312 14.321 25.0441 12.4792 24.1875H11.1C4.97187 24.1875 0 29.2434 0 35.475V38.9688C0 41.1943 1.77567 43 3.96429 43H33.0357C35.2243 43 37 41.1943 37 38.9688V35.475C37 29.2434 32.0281 24.1875 25.9 24.1875Z" fill="black"/>
                         </svg>
-                        <div className="field">
-                            <div className="Username-box" style={{marginTop:15}}>
-                            <input type="text" id="username" placeholder="" />
-                            <label htmlFor="username">Username</label>
-                            </div>
-                        </div>
+                        <Form
+                             name="basic"
+                            labelCol={{ span: 8 }}
+                            wrapperCol={{ span: 16 }}
+                            style={{ maxWidth: 600 }}
+                            initialValues={{ remember: true }}
+                            onFinish={onFinish}
+                            onFinishFailed={onFinishFailed}
+                            autoComplete="off"
+                                                 >
+                            <Form.Item<FieldType>
+                                className="Username-box"
+                                label="Username"
+                                name="username"
+                                rules={[{ required: true, message: 'Please input your username!' }]}
+                                labelCol={{ span: 24 }}
+                                 >
+                                <Input />
+                            </Form.Item>
 
-                        <div className="field">
-                        <div className="Password-box" style={{marginTop:30}}>
-                            <input type="password" id="password" placeholder="" />
-                            <label htmlFor="password">Password</label>
-                           
-                        </div>
-                        </div>
-                        <Link to="/">
-                        <Flex gap="small" wrap="wrap">
-                            <Button className = "Login-button" type="primary" >
-                                    Login
+                            <Form.Item<FieldType>
+                                 className="Password-box"
+                                label="Password"
+                                name="password"
+                                rules={[{ required: true, message: 'Please input your password!' }]}
+                                labelCol={{ span: 24 }}
+                             >
+                                <Input.Password />
+                             </Form.Item>
+
+                            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                            <Button className = "Login-button" type="primary" htmlType="submit">
+                                Login
                             </Button>
-                         </Flex>
-                         </Link>
+                            </Form.Item>
+                        </Form>
                         </Card>
                     </Col>
                 </Row>
