@@ -14,7 +14,7 @@ export default function Sidebar() {
     return(
     
       <>
-        <Layout style={{overflow: 'initial',minHeight: '100vh'}}>
+       
             <Sider 
                 style={{
                 left: 0, 
@@ -115,7 +115,7 @@ export default function Sidebar() {
 
         
             </Sider>
-        </Layout>
+    
         
       </> 
     )
