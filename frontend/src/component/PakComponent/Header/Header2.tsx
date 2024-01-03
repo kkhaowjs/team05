@@ -1,8 +1,8 @@
 import type { MenuProps } from 'antd';
-import { Button,Flex,Input,Dropdown } from 'antd';
+import { Button,Flex,Input,Dropdown, Layout } from 'antd';
 import './Style.css'
 import { Link } from 'react-router-dom';
-
+const { Header } = Layout;
 const CategoryItems: MenuProps['items'] = [
     {
       label: '1st category',
@@ -22,23 +22,23 @@ const CategoryItems: MenuProps['items'] = [
   ];
   const AccoutItems: MenuProps['items'] = [
     {
-      label: <a href="/EditProfilePage">Edit profile</a>,
+      label: <a href="/EditProfile">Edit profile</a>,
       key: '1',
       style:{color: '#003D06',fontSize:'12px'},
 
     },
     {
-        label: <a href="/CartPage">My Cart</a>,
+        label: <a href="/Cart">My Cart</a>,
       key: '2',
       style:{color: '#003D06',fontSize:'12px'},
     },
     {
-        label: <a href="/WishlistPage">My Wishlist</a>,
+        label: <a href="/Wishlist">My Wishlist</a>,
       key: '3',
       style:{color: '#003D06',fontSize:'12px'},
     },
     {
-        label: <a href="/Purchasepage">My Purchase</a>,
+        label: <a href="/Purchase">My Purchase</a>,
       key: '4',
       style:{color: '#003D06',fontSize:'12px'},
     },
@@ -52,6 +52,9 @@ const CategoryItems: MenuProps['items'] = [
 const Header2 = () =>{
     return(
         <>
+        <Layout>
+        <Header style={{ display: 'flex', alignItems: 'center',background: '#FFFF' ,height:'80px'}}>
+
         <svg className='brand-icon'
             style={{marginLeft:'50px', 
                     minWidth: '50px', 
@@ -105,7 +108,7 @@ const Header2 = () =>{
         </div>
         
 
-        <Link to = "/CartPage">
+        <Link to = "/Cart">
         <div className='Hcart'
                 style={{ minWidth: '22px', 
                         minHeight: '22px',
@@ -119,6 +122,11 @@ const Header2 = () =>{
           <span className='Hcart-text'>Cart</span>
         </div>
         </Link>
+
+
+        </Header>
+        </Layout>
+        
 
         </>
     )
