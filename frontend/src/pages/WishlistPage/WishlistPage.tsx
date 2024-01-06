@@ -89,8 +89,8 @@ export default function WishlistPage(){
                 <Row>
                   <Flex  >
                     <Button className="AddCart-button" type="primary"
-                    // onMouseOver={(e) => e.currentTarget.style.color = '#4D4D4D'}
-                    // onMouseOut={(e) => e.currentTarget.style.color = '#000000'} 
+                    onMouseOver={(e) => e.currentTarget.style.color = '#6d6d6d'}
+                    onMouseOut={(e) => e.currentTarget.style.color = '#000'} 
                     style={{
                       backgroundColor:'#ffff',
                       width:110,
@@ -105,6 +105,8 @@ export default function WishlistPage(){
                       Add to Cart
                     </Button>
                     <Button className="BuyNow-button" type="primary"
+                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2d4e31'}
+                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#003D06'} 
                     style={{
                       backgroundColor:'#003D06',
                       width:110,
@@ -187,8 +189,8 @@ export default function WishlistPage(){
                 <Row>
                   <Flex  >
                     <Button className="AddCart-button" type="primary"
-                    // onMouseOver={(e) => e.currentTarget.style.color = '#4D4D4D'}
-                    // onMouseOut={(e) => e.currentTarget.style.color = '#000000'} 
+                    onMouseOver={(e) => e.currentTarget.style.color = '#4D4D4D'}
+                    onMouseOut={(e) => e.currentTarget.style.color = '#000000'} 
                     style={{
                       backgroundColor:'#ffff',
                       width:110,
@@ -203,6 +205,8 @@ export default function WishlistPage(){
                       Add to Cart
                     </Button>
                     <Button className="BuyNow-button" type="primary"
+                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2d4e31'}
+                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#003D06'} 
                     style={{
                       backgroundColor:'#003D06',
                       width:110,
@@ -287,8 +291,8 @@ export default function WishlistPage(){
                 <Row>
                   <Flex  >
                     <Button className="AddCart-button" type="primary"
-                    // onMouseOver={(e) => e.currentTarget.style.color = '#4D4D4D'}
-                    // onMouseOut={(e) => e.currentTarget.style.color = '#000000'} 
+                    onMouseOver={(e) => e.currentTarget.style.color = '#4D4D4D'}
+                    onMouseOut={(e) => e.currentTarget.style.color = '#000000'} 
                     style={{
                       backgroundColor:'#ffff',
                       width:110,
@@ -303,6 +307,8 @@ export default function WishlistPage(){
                       Add to Cart
                     </Button>
                     <Button className="BuyNow-button" type="primary"
+                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2d4e31'}
+                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#003D06'} 
                     style={{
                       backgroundColor:'#003D06',
                       width:110,

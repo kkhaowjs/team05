@@ -9,6 +9,7 @@ import CartPage from './pages/CartPage/CartPage';
 import WishlistPage from './pages/WishlistPage/WishlistPage';
 import PurchasePage from './pages/PurchasePage/PurchasePage';
 import LoginPage from './pages/LoginPage/LoginPage';
+import PaymentPage from './pages/PaymentPage/PaymentPage'
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Wishlist"      element={<WishlistPage />} />
         <Route path="/Purchase"      element={<PurchasePage />} />
         <Route path="/Login"      element={<LoginPage />} />
+        <Route path="/Payment"      element={<PaymentPage />} />
       </Routes>
     </Router>
     </>

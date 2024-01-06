@@ -64,7 +64,9 @@ const Header2 = () =>{
             <path d="M28.8232 42.4489L36.3655 50.0331L48.9361 37.3928" stroke="#003D06" stroke-width="3.79209" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M28.8235 7.05612C28.8235 4.2637 26.5724 2 23.7953 2C21.0182 2 18.7671 4.2637 18.7671 7.05612" stroke="#003D06" stroke-width="3.79209" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        <Link to="/">
             <span className='Nameofbrand'>Torhinozorus</span>
+        </Link>
 
         <Dropdown  menu={{ items:CategoryItems }}>
         <a onClick={(e) => e.preventDefault()}>
