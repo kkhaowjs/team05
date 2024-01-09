@@ -22,7 +22,7 @@ func TestEmail(t *testing.T) {
 			Username: "p",
 		}
 
-		ok, err := govalidator.ValidateStruct(member)
+		ok, err := govalidator.ValidateStruct(customer)
 
 		g.Expect(ok).NotTo(BeNil())
 		g.Expect(err).NotTo(BeNil())
