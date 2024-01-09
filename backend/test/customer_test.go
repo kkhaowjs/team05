@@ -16,9 +16,8 @@ func TestEmail(t *testing.T) {
 	t.Run(`Email is invalid`, func(t *testing.T) {
 		customer := entity.Customer{
 			Email: "pak@hotmail.com",
-			FirstName: "p",
-			LastName: "p",
-			Dateofbirth: "",
+			Firstname: "p",
+			Lastname: "p",
 			Username: "p",
 		}
 
