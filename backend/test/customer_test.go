@@ -29,3 +29,23 @@ func TestEmail(t *testing.T) {
 		g.Expect(err.Error()).To(Equal("Email is invalid"))
 	})
 }
+func TestBestCase(t *testing.T) {
+
+	g := NewGomegaWithT(t)
+
+	t.Run(`so good baby`, func(t *testing.T) {
+		customer := entity.Customer{
+			Email: "pak@hotmail.com",
+			Firstname: "p",
+			Lastname: "p",
+			Username: "p",
+		}
+
+		ok, err := govalidator.ValidateStruct(customer)
+
+		g.Expect(ok).To(BeTrue())
+		g.Expect(err).To(BeNil())
+
+		
+	})
+}
