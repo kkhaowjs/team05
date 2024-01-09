@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/PyeThun/team05/controller"
+	// "github.com/PyeThun/team05/controller"
 	"github.com/PyeThun/team05/entity"
 )
 
