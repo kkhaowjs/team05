@@ -4,7 +4,7 @@ import type { DatePickerProps,UploadProps } from 'antd';
 import dayjs from 'dayjs';
 import Header1 from '../../component/PakComponent/Header/Header1'
 import Header2 from '../../component/PakComponent/Header/Header2';
-import qrcode from '../../assets/PaymentQRCode.png' 
+import qrcode from '../../assets/3bears.jpg' 
 import './Style.css'
 
 const PaymentPage = () => {
